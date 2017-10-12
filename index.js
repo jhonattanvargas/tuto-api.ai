@@ -7,7 +7,7 @@ const apiai = require('apiai')('6a01a716ccc94de1a2c3024e84d0478d');
 app.use(express.static(__dirname + '/views')); // html
 app.use(express.static(__dirname + '/public')); // js, css, images
 
-const server = app.listen(5000);
+const server = app.listen(process.env.PORT || 5000);
 const io = require('socket.io')(server)
 
 io.on('connection', function(socket) {

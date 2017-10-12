@@ -1,6 +1,6 @@
 'use strict';
 
-const socket = io.connect('http://192.168.1.152:5000')
+const socket = io()
 
 const outputYou = document.querySelector('.output-you');
 const outputBot = document.querySelector('.output-bot');
