@@ -18,7 +18,7 @@ io.on('connection', function(socket) {
       // Get a reply from API.AI
   
       let apiaiReq = apiai.textRequest(text, {
-        sessionId: 'keysession1'
+        sessionId: socket.id
       });
   
       apiaiReq.on('response', (response) => {
